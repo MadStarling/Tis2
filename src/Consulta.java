@@ -5,6 +5,14 @@ public class Consulta {
 	Paciente paciente;
 	Medico medico;
 	
+	public Consulta(String data, String hora, int status, Paciente paciente, Medico medico) {
+		this.data = data;
+		this.hora = hora;
+		this.status = status;
+		this.paciente = paciente;
+		this.medico = medico;
+	}
+	
 	public String getData() {
 		return data;
 	}

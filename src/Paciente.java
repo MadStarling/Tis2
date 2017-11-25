@@ -1,4 +1,3 @@
-
 public class Paciente {
 	private String historico, restricoes, nome, sexo, email, logradouro, cidade, complemento, celular, nascimento;
 	private int id, cpf, numero;

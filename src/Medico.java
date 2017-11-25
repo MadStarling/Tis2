@@ -1,4 +1,3 @@
-
 public class Medico {
 	
 	private int id;
@@ -21,8 +20,5 @@ public class Medico {
 	}
 	public void setEspecialidade(String especialidade) {
 		this.especialidade = especialidade;
-	}
-	
-	
-	
+	}	
 }

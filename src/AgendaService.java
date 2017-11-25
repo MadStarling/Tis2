@@ -3,6 +3,7 @@ import java.io.PrintStream;
 import java.net.InetSocketAddress;
 import java.net.SocketAddress;
 import java.net.URI;
+import java.util.ArrayList;
 
 import org.json.JSONObject;
 import org.simpleframework.http.Path;
@@ -15,7 +16,6 @@ import org.simpleframework.transport.connect.Connection;
 import org.simpleframework.transport.connect.SocketConnection;
 
 public class AgendaService implements Container{
-	
 	Agenda a = new Agenda();
 	
 	@Override
@@ -58,6 +58,11 @@ public class AgendaService implements Container{
 				String hora = q.get("hora");
 				
 				a.setConsulta(data, hora, paciente, medico);
+			case "getAll":
+				ArrayList<Consulta> consultas = a.getAllConsultas();
+				
+				JSONObject obj = new JSONObject(consultas);
+				body.print(obj);
 		}
 	}
 
@@ -84,8 +89,6 @@ public class AgendaService implements Container{
 	}
 
 	private void handleMedico(String name, PrintStream body) {
-		// TODO Auto-generated method stub
-		
 	}
 
 	public static void main(String[] list) throws Exception {

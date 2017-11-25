@@ -44,4 +44,9 @@ public class Agenda {
 		
 		consultas.add(c);
 	}
+
+	@SuppressWarnings("unchecked")
+	public ArrayList<Consulta> getAllConsultas() {
+		return (ArrayList<Consulta>) consultas.clone();
+	}
 }

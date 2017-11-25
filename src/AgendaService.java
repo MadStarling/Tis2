@@ -1,8 +1,6 @@
-import java.awt.Desktop;
 import java.io.PrintStream;
 import java.net.InetSocketAddress;
 import java.net.SocketAddress;
-import java.net.URI;
 import java.util.ArrayList;
 
 import org.json.JSONObject;

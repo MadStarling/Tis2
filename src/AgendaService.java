@@ -22,7 +22,7 @@ public class AgendaService implements Container{
 			PrintStream body = response.getPrintStream();
 
 			response.setValue("Content-Type", "text/plain");
-			response.setValue( "Access-Control-Allow-Origin",  "file:///D:/Workfolder/WebProjects/Dr.consult/cadastrar.html");
+			response.setValue( "Access-Control-Allow-Origin",  "null");
 			
 			redirect(request.getPath(), body, request);
 			

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Dr. Consult</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/default.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+  
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> -->
+  <script type="text/JavaScript" src="javascript/controller.js"></script>
+  
+  
+
+</head>
+
+<body>
+
+ <!-- Navigation -->
+ <nav class="navbar navbar-expand-lg navbar-light bg-faded py-lg-4">
+  <div class="container">
+    <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Dr. Consult</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item active px-lg-4">
+          <a class="nav-link text-uppercase text-expanded" href="index.html">Dr.consult
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item px-lg-4">
+          <a class="nav-link text-uppercase text-expanded" href="agendar.html">Agendar Consulta</a>
+        </li>
+        <li class="nav-item px-lg-4">
+          <a class="nav-link text-uppercase text-expanded" href="cadastrar.html">Cadastrar Paciente</a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="bg-faded p-4 my-4">
+    <hr class="divider">
+    <h2 class="text-center text-lg text-uppercase my-0">
+      <strong>Agendamento</strong>
+    </h2>
+    <hr class="divider">
+    <form id="formFilme">
+      <div class="row">
+        <div class="form-group col-lg-4">
+          <label class="text-heading">Nome do paciente:</label>
+          <input type="text" id = "paciente" class="form-control">
+        </div>
+        <div class="form-group col-lg-4">
+          <label class="text-heading">Medico:</label>
+          <input id = "medico" type ="search" list = "medico" class="form-control">
+        </div>
+                 
+                 <div class="form-group col-lg-4">
+                  <label class="text-heading">Datas:</label>
+                  <input type="data" id="data" class="form-control">
+                </div>
+                <div class="form-group col-lg-4">
+                  <label class="text-heading">Hora:</label>
+                  <input type="data" id="hora" class="form-control">
+                </div>
+                
+                
+                
+                <div class="form-group col-lg-12">
+                  <button type="submit" class="btn btn-secondary" onclick="agendar()">Agendar</button>
+                </div>
+              </div>
+            </form>
+            
+          </div>
+
+        </div>
+        <!-- /.container -->
+
+        
+
+        
+
+      </body>
+
+      </html>

@@ -3,12 +3,20 @@ public class Medico {
 	private int id;
 	private String nome, especialidade;
 	
+	Medico(int id, String nome, String especialidade) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.especialidade = especialidade;
+	}
+	
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
+	
 	public String getNome() {
 		return nome;
 	}

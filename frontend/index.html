@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Dr. Consult</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom fonts for this template -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+
+	<!-- Custom styles for this template -->
+	<link href="css/default.css" rel="stylesheet">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/JavaScript" src="javascript/controller.js"></script>
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-faded py-lg-4">
+		<div class="container">
+			<a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Dr. Consult</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav mx-auto">
+					<li class="nav-item active px-lg-4">
+						<a class="nav-link text-uppercase text-expanded" href="index.html">Dr.consult
+							<span class="sr-only">(current)</span>
+						</a>
+					</li>
+					<li class="nav-item px-lg-4">
+						<a class="nav-link text-uppercase text-expanded" href="agendar.html">Agendar Consulta</a>
+					</li>
+					<li class="nav-item px-lg-4">
+						<a class="nav-link text-uppercase text-expanded" href="cadastrar.html">Cadastrar Paciente</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container" >
+
+		<div id="show" class="bg-faded p-4 my-4">
+			<hr class="divider">
+			<h2 class="text-center text-lg text-uppercase my-0">
+				<strong>Agenda Semanal</strong>
+			</h2>
+			<hr class="divider">
+
+			<div onload="execRetrieve();"></div>
+
+
+
+
+			<table class="table table-striped" >
+				<thead>
+					<tr>
+						<th>DOM</th>
+						<th>SEG</th>
+						<th>TER</th>
+						<th>QUA</th>
+						<th>QUI</th>
+						<th>SEX</th>
+						<th>SAB</th>
+					</tr>
+				</thead>
+				<tbody>
+					<div id= "agenda">
+						<tr>
+							<td class="horario">07:00</td>
+							<td class="horario">07:00</td>
+							<td><div class="horario">07:00</div>
+								<div class="dia" id="dom">
+									<p>Paciente Astolfo</p>
+									<p>Especialidade: Clinica Medica</p>
+									<p>Medico: Eduardo Gomes</p>
+									<button class="btn btn-secondary">Ocultar</button>
+								</div>
+							</td>
+							<td class="horario">07:00</td>
+							<td class="horario">07:00</td>
+							<td class="horario">07:00</td>
+							<td class="horario">07:00</td>
+						</tr>
+						<tr>
+							<td><div class="horario" >07:30</div>
+								<div class="dia" id="seg" >
+									<p>Paciente Aroldo</p>
+									<p>Especialidade: Cardiologista</p>
+									<p>Medico: Eduardo Gomes</p>
+									<button class="btn btn-secondary">Ocultar</button>
+								</div>
+							</td>
+							<td class="horario">07:30</td>
+							<td class="horario">07:30</td>
+							<td class="horario">07:30</td>
+							<td class="horario">07:30</td>
+							<td class="horario">07:30</td>
+							<td class="horario">07:30</td>
+						</tr>
+						<tr>
+							<td class="horario">08:00</td>
+							<td class="horario">08:00</td>
+							<td class="horario">08:00</td>
+							<td class="horario">08:00</td>
+							<td class="horario">08:00</td>
+							<td class="horario">08:00</td>
+							<td class="horario">08:00</td>
+						</tr>
+					</div>
+				</tbody>
+			</table>			
+		</div>
+		<!-- /.container -->
+		<script>
+			$("#show").ready(function(){
+
+				$(".dia").hide(1000);
+				$(".horario.dia").click(function(){
+					$("#seg").show(1000);
+				});
+				$("button").click(function(){
+					$("#seg").hide(1000);
+				});
+			});
+		</script>
+
+	</body>
+
+	</html>

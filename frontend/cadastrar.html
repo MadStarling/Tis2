@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Dr. Consult</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/default.css" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/JavaScript" src="javascript/controller.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-faded py-lg-4">
+    <div class="container">
+      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Dr. Consult</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item active px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="index.html">Dr.consult
+              <span class="sr-only">(current)</span>
+          </a>
+      </li>
+      <li class="nav-item px-lg-4">
+        <a class="nav-link text-uppercase text-expanded" href="agendar.html">Agendar Consulta</a>
+    </li>
+    <li class="nav-item px-lg-4">
+        <a class="nav-link text-uppercase text-expanded" href="cadastrar.html">Cadastrar Paciente</a>
+    </li>
+</ul>
+</div>
+</div>
+</nav>
+
+<div class="container">
+
+
+   <div class="bg-faded p-4 my-4">
+    <hr class="divider">
+    <h2 class="text-center text-lg text-uppercase my-0">
+      <strong>Formulário de Cadastro</strong>
+  </h2>
+  <hr class="divider">
+    <form id="formFilme">	
+          <div class="row">
+              <div class="form-group col-lg-4">
+                <label class="text-heading">Nome do Paciente:</label>
+                <input type="text" class="form-control" id="nome">
+            </div>
+            <div class="form-group col-lg-4">
+                <label class="text-heading">Data Nasc.:</label>
+                <input type="date" class="form-control" id="nascimento">
+            </div>
+            <div class="form-group col-lg-4">
+                <label class="text-heading">CPF:</label>
+                <input type="text" class="form-control" id="cpf">
+            </div>
+            <div class="form-group col-lg-4">
+                <label class="text-heading">Sexo:</label>
+                <input type="text" class="form-control" id="sexo">
+            </div>
+            <div class="form-group col-lg-4">
+                <label class="text-heading">Endereço:</label>
+                <input type="text" class="form-control" id="endereco">
+            </div>
+            <div class="form-group col-lg-4">
+                <label class="text-heading">Cidade:</label>
+                <input type="text" class="form-control" id="cidade">
+            </div>
+            <div class="form-group col-lg-4">
+                <label class="text-heading">Comp.:</label>
+                <input type="text" class="form-control" id="complemento">
+            </div>
+            <div class="form-group col-lg-4">
+                <label class="text-heading">CEP:</label>
+                <input type="text" class="form-control" id="cep">
+            </div>
+            <div class="form-group col-lg-4">
+                <label class="text-heading">Celular:</label>
+                <input type="tel" class="form-control" id="tel">
+            </div>
+            <div class="form-group col-lg-4">
+                <label class="text-heading">Email:</label>
+                <input type="email" class="form-control" id="email">
+            </div>
+
+            <div class="clearfix"></div>
+            <div class="form-group col-lg-12">
+                <label class="text-heading">Doenças Preexistentes</label>
+                <textarea id = "doencas" class="form-control" rows="6"></textarea>
+            </div>
+            <div class="form-group col-lg-12">
+                <label class="text-heading">Restrições/Alergias</label>
+                <textarea id = "alergias" class="form-control" rows="6"></textarea>
+            </div>
+            <div class="form-group col-lg-12">
+                <button class="btn btn-secondary" onclick="createPaciente()">Cadastrar</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

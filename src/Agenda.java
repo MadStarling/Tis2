@@ -6,21 +6,29 @@ public class Agenda {
 	ArrayList<Paciente> pacientes = new ArrayList<Paciente>();
 	ArrayList<Medico> medicos = new ArrayList<Medico>();
 	
+	Agenda(){
+		super();
+		medicos.add(new Medico(1, "Jose", "Clinico geral"));
+		medicos.add(new Medico(2, "João", "Pediatra"));
+		medicos.add(new Medico(3, "Josias", "Cirurgião"));
+	}
+	
 	public void createPaciente(String historico, String restricoes, String nome, String sexo, String email, String logradouro,
 			String cidade, String complemento, String celular, String nascimento, String cpf){
 			int id = 0;
-			while (pacientes.iterator().hasNext()) {
-				id++;
+			if (!pacientes.isEmpty()) {
+				id = pacientes.size();
 			}
 			
 			
 			Paciente p = new Paciente(historico, restricoes, nome, sexo, email, logradouro, cidade,
-					complemento, celular, nascimento, id+1, cpf);
+					complemento, celular, nascimento, id, cpf);
 			
 			pacientes.add(p);
 	}
 	
 	public void setConsulta(String data, String hora, String pacienteName, String medicoName) {
+		
 		Medico m = null;
 		Paciente p = null;
 		

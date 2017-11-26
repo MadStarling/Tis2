@@ -1,12 +1,12 @@
 public class Paciente {
-	private String historico, restricoes, nome, sexo, email, logradouro, cidade, complemento, celular, nascimento;
-	private int id, cpf, numero;
+	private String historico, restricoes, nome, sexo, email, logradouro, cidade, complemento, celular, nascimento, cpf;
+	private int id, numero;
 	
 	public Paciente() {
 		super();
 	}
 	public Paciente(String historico, String restricoes, String nome, String sexo, String email, String logradouro,
-			String cidade, String complemento, String celular, String nascimento, int id, int cpf, int numero) {
+			String cidade, String complemento, String celular, String nascimento, int id, String cpf) {
 		super();
 		this.historico = historico;
 		this.restricoes = restricoes;
@@ -20,7 +20,6 @@ public class Paciente {
 		this.nascimento = nascimento;
 		this.id = id;
 		this.cpf = cpf;
-		this.numero = numero;
 	}
 	public String getHistorico() {
 		return historico;
@@ -88,10 +87,10 @@ public class Paciente {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getCpf() {
+	public String getCpf() {
 		return cpf;
 	}
-	public void setCpf(int cpf) {
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
 	public int getNumero() {

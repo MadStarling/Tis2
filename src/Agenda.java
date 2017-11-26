@@ -7,7 +7,7 @@ public class Agenda {
 	ArrayList<Medico> medicos = new ArrayList<Medico>();
 	
 	public void createPaciente(String historico, String restricoes, String nome, String sexo, String email, String logradouro,
-			String cidade, String complemento, String celular, String nascimento, int cpf, int numero){
+			String cidade, String complemento, String celular, String nascimento, String cpf){
 			int id = 0;
 			while (pacientes.iterator().hasNext()) {
 				id++;
@@ -15,7 +15,7 @@ public class Agenda {
 			
 			
 			Paciente p = new Paciente(historico, restricoes, nome, sexo, email, logradouro, cidade,
-					complemento, celular, nascimento, id+1, cpf, numero);
+					complemento, celular, nascimento, id+1, cpf);
 			
 			pacientes.add(p);
 	}
@@ -24,19 +24,15 @@ public class Agenda {
 		Medico m = null;
 		Paciente p = null;
 		
-		Iterator<Paciente> i = pacientes.iterator();
-		
-		while(i.hasNext()) {
-			if(i.next().getNome() == pacienteName) {
-				p = (Paciente) i.next();
+		for(Paciente currentPaciente : pacientes) {
+			if(currentPaciente.getNome() == pacienteName) {
+				p = currentPaciente;
 			}
 		}
 		
-		Iterator<Medico> j = medicos.iterator();
-		
-		while(j.hasNext()) {
-			if(j.next().getNome() == pacienteName) {
-				m = (Medico) j.next();
+		for(Medico currentMedico : medicos) {
+			if(currentMedico.getNome() == medicoName) {
+				m = currentMedico;
 			}
 		}
 		

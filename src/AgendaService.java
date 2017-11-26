@@ -21,7 +21,8 @@ public class AgendaService implements Container{
 		try {
 			PrintStream body = response.getPrintStream();
 
-			response.setValue("Content-Type", "application/json");
+			response.setValue("Content-Type", "text/plain");
+			response.setValue( "Access-Control-Allow-Origin",  "file:///D:/Workfolder/WebProjects/Dr.consult/cadastrar.html");
 			
 			redirect(request.getPath(), body, request);
 			
@@ -37,11 +38,11 @@ public class AgendaService implements Container{
 		String directory = path.getDirectory();
 		
 		switch(directory){
-			case "medico": 
+			case "/medico/": 
 				handleMedico(path.getName(), body);
-			case "paciente":
+			case "/paciente/":
 				handlePaciente(path.getName(), body, request);
-			case "consulta":
+			case "/consulta/":
 				handleConsulta(path.getName(), body, request);
 		}
 	}
@@ -78,11 +79,10 @@ public class AgendaService implements Container{
 				String complemento = q.get("complemento");
 				String celular = q.get("celular");
 				String nascimento = q.get("nascimento");
-				int cpf = Integer.parseInt(q.get("cpf"));
-				int numero = Integer.parseInt(q.get("numero"));
+				String cpf = q.get("cpf");
 				
 				a.createPaciente(historico, restricoes, nome, sexo, email, logradouro, cidade,
-						complemento, celular, nascimento, cpf, numero);
+						complemento, celular, nascimento, cpf);
 		}
 	}
 

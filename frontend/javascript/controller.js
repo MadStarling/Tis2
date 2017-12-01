@@ -1,3 +1,5 @@
+var baseUrl = "http://127.0.0.1:880/";
+
 function createPaciente() {
 
 	var paciente = {
@@ -12,19 +14,14 @@ function createPaciente() {
 		historico: $('#doencas').val(),
 		restricoes: $('#alergias').val()
 	};
-
-
-	var http = new XMLHttpRequest();
-	var url = "http://127.0.0.1:880/paciente/save";
-	http.open("POST", url, true);
-
-	http.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-	http.onreadystatechange = function() {
-	    if(http.readyState == 4 && http.status == 200) {
-	        alert('Paciente cadastrado com sucesso!');
-	    }
-	}
-	http.send(paciente);
+	var currentUrl = baseUrl + "paciente/save";
+	
+	$.ajax({
+		url: currentUrl,
+        type: 'POST',
+        data: { json: JSON.stringify(paciente)},
+        dataType: 'json'
+	});
 }
 
 function agendar() {
